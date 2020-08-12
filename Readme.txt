@@ -10,3 +10,7 @@ stow -nSt ~ *
 -D Delink
 
 --adobt use this if the files already exist in your home folder...they are then copied to the location and linked. Be careful with it though. 
+
+For Fonts
+
+stow -nSt /usr/share/fonts *
