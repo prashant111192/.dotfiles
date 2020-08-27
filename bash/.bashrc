@@ -120,8 +120,8 @@ fi
 alias ..='cd ..'
 alias Titan="ssh prashant@titan-c815"
 alias Monster="ssh prashant@pc33-c815"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/prashant/Software/DualSPHysics_v4.4/bin/linux:/usr/local/cuda-10.1/lib64:/home/prashant/Software/DualSPHysics_v5.0_BETA/bin/linux" 
-export PATH="$PATH:/home/prashant/Software/DualSPHysics_v5.0_BETA/bin/linux"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/prashant/Software/DualSPHysics_v4.4/bin/linux:/usr/local/cuda-10.1/lib64:/home/prashant/Software/DualSPHysics_v5.0_BETA/bin/linux/" 
+export PATH="$PATH:/home/prashant/Software/DualSPHysics_v5.0_BETA/bin/linux/"
 export EDITOR="/usr/bin/vim"
 EDITOR=nvim
 
