@@ -212,5 +212,7 @@ bar {
 # Hopefully, a simple edit of the i3 config file (in ~/.i3/config) makes it beautiful again, and painless. Add the following to the bottom of that file
 exec --no-startup-id gnome-settings-daemon
 
-
+# wallpaper 
+exec_always feh --bg-scale --no-xinerama /home/prashant/.config/i3/wallpapers.jpg
+# Start thunderbird when the computer starts
 exec thunderbird
