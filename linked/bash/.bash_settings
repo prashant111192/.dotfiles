@@ -1,0 +1,11 @@
+#Other settings 
+
+#set nvim as default editor
+export EDITOR="/usr/bin/nvim"
+EDITOR=nvim
+
+
+set -o vi
+# exec fish
+# The new dircolors have been installed as /home/prashant/.dir_colors/dircolors.
+#eval `dircolors /home/prashant/.dir_colors/dircolors`
