@@ -27,6 +27,8 @@ add-apt-repository ppa:regolith-linux/release
 apt update
 apt -y install i3-gaps
 
+apt -y install i3blocks
+
 
 apt -y install gnome-tweak-tool
 #git clone https://github.com/prashant111192/.dotfiles.git
