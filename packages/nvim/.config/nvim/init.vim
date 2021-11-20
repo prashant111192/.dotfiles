@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'itchyny/lightline.vim'        " the line
 Plug 'fneu/breezy'                  " Colour scheme
+" Plug 'ghifarit53/tokyonight-vim'
 Plug 'tpope/vim-fugitive'           " Git wrapper
 Plug 'vim-scripts/tComment'         " l-c comments
 Plug 'lervag/vimtex', { 'for': 'tex' }
