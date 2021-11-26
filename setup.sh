@@ -48,6 +48,26 @@ mkdir -p /etc/X11/xorg.conf.d
 cp ./linked/90-touchpad.conf /etc/X11/xorg.conf.d/
 
 
+echo Make all blocks executable
+
+Now=$PWD
+
+chmod +x ./packages/i3/.config/i3/config/blocks/*
+
+
+
+echo light for using keys to work with screen brightness
+echo based on https://unix.stackexchange.com/a/625983
+apt -y install light
+
+
+
+
+echo Please restart device and run
+echo light -N 10
+echo this sets the minimum brightness of the device to 10%
+
+
 
 #stow -n -R -d $HOME/tmpdotfiles/.dotfiles/ -t ~ bash 
 
