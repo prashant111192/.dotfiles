@@ -40,8 +40,12 @@ apt -y install pavucontrol
 
 #git clone https://github.com/prashant111192/.dotfiles.git
 echo Install VSCODE
-
 snap install --classic code
+
+
+
+echo Install feh for wallpaper
+apt -y install feh
 
 echo Mousepad Profile
 mkdir -p /etc/X11/xorg.conf.d

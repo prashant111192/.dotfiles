@@ -210,15 +210,58 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Window Colors
+set $bgcolor #565f89
+set $abgcolor #7dcfff
+set $ibgcolor #1a1b26 
+set $textcolor #c0caf5
+set $atextcolor #1a1b26
+set $itextcolor #9aa5ce
+set $utextcolour #222536
+set $ubgcolor #f7768e
+
+#                               border          background              text            indicator
+client.focused                  $bgcolor        $abgcolor               $atextcolor      $bgcolor
+client.unfocused                $ibgcolor       $ibgcolor               $textcolor      $ibgcolor
+client.focused_inactive         $ibgcolor       $ibgcolor               $itextcolor      $ibgcolor
+client.urgent                   $ubgcolor       $ubgcolor               $textcolor      $ubgcolor
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        # status_command i3status
+# bar {
+#         # status_command i3status
+#
+#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#         position top
+# }
 
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
+bar {
+       position top
+       # font pango:FontAwesome, JetBrains Mono Regular 14
+       # status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+      status_command i3blocks -c ~/.config/i3/i3blocks.conf
+     # i3bar_command i3bar --transparency
+      # tray_output none
+       colors {
+               background $ibgcolor
+               separator #a9b1d6
+               #                       border          background      text
+               focused_workspace       $bgcolor        $bgcolor        $textcolor
+               inactive_workspace      $ibgcolor       $ibgcolor       $itextcolor
+               urgent_workspace        $ubgcolor       $ubgcolor       $utextcolour
+       }
 }
 
 # Hopefully, a simple edit of the i3 config file (in ~/.i3/config) makes it beautiful again, and painless. Add the following to the bottom of that file
 exec --no-startup-id gnome-settings-daemon
 
+
+# Gaps
+gaps inner 2
+gaps outer 2
+
+# Activate smart borders (always)
+smart_borders on
+
+#Wallpaper
+exec_always feh --bg-fill $HOME/.dotfiles/linked/wallpaper3.jpg
