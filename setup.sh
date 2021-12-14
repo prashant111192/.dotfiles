@@ -66,6 +66,12 @@ apt -y install light
 
 
 
+echo instal pywal
+pip3 install pywal 
+pip3 install haishoku 
+
+
+echo "use wal -i <link to walpaper> --backend haishok"
 
 echo Please restart device and run
 echo light -N 10

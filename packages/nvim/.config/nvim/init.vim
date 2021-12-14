@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'itchyny/lightline.vim'        " the line
 Plug 'fneu/breezy'                  " Colour scheme
+Plug 'dylanaraps/wal.vim'
+
 " Plug 'ghifarit53/tokyonight-vim'
 Plug 'tpope/vim-fugitive'           " Git wrapper
 Plug 'vim-scripts/tComment'         " l-c comments
@@ -47,14 +49,15 @@ set exrc " Source config file from working directory if present
 set secure " Restrict usage of some commands in non-default config files
 
 " Call the theme one
-colorscheme breezy
-set background=dark
+" colorscheme breezy
+colorscheme wal
+" set background=dark
 
 " This line enables the true color support.
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Note, the above line is ignored in Neovim 0.1.5 above, use this line instead.
-set termguicolors
+" set termguicolors
 
 " set t_Co=256
 " let &t_AB="\e[48;5;%dm"

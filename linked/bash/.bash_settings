@@ -9,3 +9,9 @@ set -o vi
 # exec fish
 # The new dircolors have been installed as /home/prashant/.dir_colors/dircolors.
 #eval `dircolors /home/prashant/.dir_colors/dircolors`
+#
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+cat ~/.cache/wal/sequences 
