@@ -1,0 +1,15 @@
+#!/bin/sh
+
+x=$RANDOM
+declare -a arrPics
+FILES=/home/prashant/Pictures/wallpapers/*
+count=0
+for f in $FILES
+do
+    arrPics[$count]=$f
+    count=$count+1
+done
+magicNumber=$((x%count))
+feh --no-fehbg --bg-fill ${arrPics[$magicNumber]}
+# backend= wal, schemer2, colorthief, haishoku, colorz
+wal --backend  haishoku -i  ${arrPics[$magicNumber]}

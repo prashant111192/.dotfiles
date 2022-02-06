@@ -220,6 +220,15 @@ bindsym $mod+r mode "resize"
 # set $itextcolor #9aa5ce
 # set $utextcolour #222536
 # set $ubgcolor #f7768e
+#
+#
+#
+#
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use
+# from the generated scheme.
+# ROTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources for some reason.
 set_from_resource $bgcolor i3wm.color1  #f7768e
 set_from_resource $abgcolor i3wm.color2  #f7768e
 set_from_resource $ibgcolor i3wm.color0  #f7768e
@@ -234,6 +243,8 @@ client.focused                  $bgcolor        $abgcolor               $atextco
 client.unfocused                $ibgcolor       $ibgcolor               $textcolor      $ibgcolor
 client.focused_inactive         $ibgcolor       $ibgcolor               $itextcolor      $ibgcolor
 client.urgent                   $ubgcolor       $ubgcolor               $textcolor      $ubgcolor
+
+client.background       $bg
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -266,19 +277,24 @@ exec --no-startup-id gnome-settings-daemon
 
 
 # Gaps
-# gaps inner 2
-# gaps outer 2
+# gaps inner 9
+# gaps outer 9
 
 # Activate smart borders (always)
 smart_borders on
 
+
 #Wallpaper
-exec_always feh --bg-fill $HOME/.dotfiles/linked/gow.jpg
+
+# Use the bash file created to change the wallpaper
+exec_always exec bash $HOME/.dotfiles/packages/i3/.config/i3/.fehbg
 
 #pywal for i3 bar
-exec_always wal -R
+exec_always wal -R 
 
 #disable focus follows mouse 
 focus_follows_mouse no
 
 
+# Or any other numeric value for "0"
+for_window [class=.*] border pixel 0
