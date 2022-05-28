@@ -47,6 +47,9 @@ snap install --classic code
 echo Install feh for wallpaper
 apt -y install feh
 
+echo Install Compton for transparency
+apt -y install compton
+
 echo Mousepad Profile
 mkdir -p /etc/X11/xorg.conf.d
 cp ./linked/90-touchpad.conf /etc/X11/xorg.conf.d/
@@ -76,6 +79,8 @@ echo Please restart device and run
 echo light -N 10
 echo this sets the minimum brightness of the device to 10%
 
+echo "make light without sudo"
+sudo chmod +s /usr/bin/light
 
 
 #stow -n -R -d $HOME/tmpdotfiles/.dotfiles/ -t ~ bash 

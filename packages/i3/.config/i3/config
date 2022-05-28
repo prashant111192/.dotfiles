@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 10, Font Awesome 5 Brands 10, FontAwesome 10
+font pango:DejaVu Sans Mono 6, Font Awesome 5 Brands 6, FontAwesome 6
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -87,7 +87,8 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 # #################
 # Using sudo apt-get install j4-dmenu-desktop
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id j4-dmenu-desktop -fn '--fixed-bold-r-normal--15-----*-iso10646-1'
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop 
 
 
 # change focus
@@ -257,7 +258,7 @@ client.background       $bg
 
 bar {
        position top
-       # font pango:FontAwesome, JetBrains Mono Regular 14
+       # font pango:FontAwesome, JetBrains Mono Regular 7
        # status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
       status_command i3blocks -c ~/.config/i3/i3blocks.conf
      # i3bar_command i3bar --transparency
@@ -274,11 +275,12 @@ bar {
 
 # Hopefully, a simple edit of the i3 config file (in ~/.i3/config) makes it beautiful again, and painless. Add the following to the bottom of that file
 exec --no-startup-id gnome-settings-daemon
+exec_always --no-startup-id compton
 
 
 # Gaps
-# gaps inner 9
-# gaps outer 9
+gaps inner 5
+gaps outer 5
 
 # Activate smart borders (always)
 smart_borders on

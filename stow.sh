@@ -12,10 +12,10 @@
 # The -R flag is used to force a 'restow' which will remove any existing symlinks before attempting to Stow.
 ################
 
-echo "make old_dotfiles"
-mkdir -p ~/.old_dotfiles
-echo Working on bash
-mv ~/.bashrc ~/.old_dotfiles/ 
+# echo "make old_dotfiles"
+# mkdir -p ~/.old_dotfiles
+# echo Working on bash
+# mv ~/.bashrc ~/.old_dotfiles/ 
 
 echo "Stowing Dotfiles...";
 
